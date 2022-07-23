@@ -1,5 +1,6 @@
 const indexController = require('../controllers/index.controller');
 const postController = require('../controllers/post.controller');
+const wisataController = require('../controllers/wisata.controller');
 const auth = require('../middlewares/auth');
 
 const router = require('express').Router();
@@ -13,4 +14,5 @@ router.get('/posts/edit/:id', postController.edit);
 router.post('/posts/update/:id', postController.update);
 router.post('/posts/delete/:id', postController.destroy);
 
+router.get('/wisata', wisataController.index)
 module.exports = router;
